@@ -8,4 +8,4 @@ jobs:
     name: Print Commit
     runs-on: ubuntu-latest
     steps:
-      - run: "A commit is done."
+      - run: echo "A commit is done."
