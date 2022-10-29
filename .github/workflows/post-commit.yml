@@ -1,0 +1,11 @@
+name: Post Commit
+
+on:
+  push
+
+jobs:
+  commit:
+    name: Print Commit
+    runs-on: ubuntu-latest
+    steps:
+      - run: "A commit is done."
