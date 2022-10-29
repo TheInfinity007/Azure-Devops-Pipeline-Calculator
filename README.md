@@ -16,5 +16,6 @@ To build, simply:
 1. Runs `npm install` to install dependencies.
 2. Runs `npm test` to run Mocha and execute the unit tests.
 
-
-
+Work Done
+1. azure-pipelines.yml - azure pipeline is created and a pipeline triggers automatically on the commit, PR and merge.
+2. .github/workflows - workflows created and github actions are also created.
