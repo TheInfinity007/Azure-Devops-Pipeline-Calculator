@@ -3,25 +3,25 @@ name: Node Build
 on: [push]
 
 jobs:
-  mainbuild:
+   mainbuild:
     runs-on: ${{ matrix.os }}
-    
+  
   strategy:
     matrix:
-      node-version: [12.x, 14.x]
-      os: [windows-latest, ubuntu-lates]
+      node-version: [12.x]
+      os: [windows-latest]
       
   steps:
-  - uses: actions/checkout@v1
+    - uses: actions/checkout@v1
   
-  - name: Run node.js on Windows and Ubuntu machines with 12 and 14 version
-    uses: actions/setup-node@v1
-    with:
-      node-version: ${{ matrix.node-version }}
+    - name: Run node.js on Windows and Ubuntu machines with 12 and 14 version
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
       
-  - name: Install npm and build
-    run: | 
-      npm ci
-      npm run build
-      npm test
+    - name: Install npm and build
+      run: | 
+        npm ci
+        npm run build
+        npm test
       
