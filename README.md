@@ -19,3 +19,4 @@ To build, simply:
 Work Done
 1. azure-pipelines.yml - azure pipeline is created and a pipeline triggers automatically on the commit, PR and merge.
 2. .github/workflows - workflows created and github actions are also created.
+2. Release created [click here](https://github.com/TheInfinity007/Azure-Devops-Pipeline-Calculator/releases)
