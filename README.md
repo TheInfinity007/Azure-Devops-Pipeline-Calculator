@@ -3,7 +3,7 @@ Calculator.js: a node.js Demonstration Project
 An example node.js project, including tests with mocha, that behaves like
 a pocket calculator.
 
-[![Build Status](https://dev.azure.com/orginfinity007/CloudSkillChallenge/_apis/build/status/TheInfinity007.Azure-Devops-Pipeline-Calculator?branchName=master)](https://dev.azure.com/orginfinity007/CloudSkillChallenge/_build/latest?definitionId=14&branchName=master)
+[![Build Status](https://dev.azure.com/orginfinity007/CloudSkillChallenge/_apis/build/status/TheInfinity007.Azure-Devops-Pipeline-Calculator?branchName=master)](https://dev.azure.com/orginfinity007/CloudSkillChallenge/_build/latest?definitionId=14&branchName=master) https://github.com/theinfinity007/Azure-Devops-Pipeline-Calculator/actions/workflows/build.yml/badge.svg
 
 The project contains a simple node.js application that exposes REST APIs
 to perform arithmetic on integers, and provides a test suite with mocha
