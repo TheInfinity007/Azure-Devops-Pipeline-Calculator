@@ -27,11 +27,32 @@ stages:
               npm test
             displayName: 'npm install, build and test'
           
+          
+          
+          - task: CopyFiles@2
+            inputs:
+              SourceFolder: '$(System.DefaultWorkingDirectory)/dist/question-ui'
+              Contents: '**/*'
+              TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+          - task: CopyFiles@2
+            inputs:
+              SourceFolder: '$(System.DefaultWorkingDirectory)'
+              Contents: 'package.json'
+              TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+          - task: ArchiveFiles@2
+            inputs:
+              rootFolderOrFile: '$(Build.ArtifactStagingDirectory)'
+              includeRootFolder: false
+              archiveType: 'zip'
+              archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+              replaceExistingArchive: true
+
           - task: PublishBuildArtifacts@1
             inputs:
-              PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-              ArtifactName: 'drop'
-              publishLocation: 'Container'
+              PathtoPublish: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+              ArtifactName: app
 
           
   - stage: Deploy
@@ -41,6 +62,7 @@ stages:
           vmImage: ubuntu-latest
 
         steps: 
+
 
           - task: DownloadBuildArtifacts@1
             inputs:
@@ -55,6 +77,8 @@ stages:
               azureSubscription: 'Azure for Students(1)(7b5dff33-02b6-4deb-b816-0af850d1da49)'
               appType: 'webAppLinux'
               WebAppName: 'azure-devops-pipeline-calculator'
-              packageForLinux: '$(System.ArtifactsDirectory)/drop/*.zip'
+              packageForLinux: '$(System.ArtifactsDirectory)/app/$(Build.BuildId).zip'
               RuntimeStack: 'NODE|14-lts'
               StartupCommand: 'npm start'
+
+              
