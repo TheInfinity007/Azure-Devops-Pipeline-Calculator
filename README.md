@@ -4,11 +4,8 @@ An example node.js project, including tests with mocha, that behaves like
 a pocket calculator.
 
 [![Build Status](https://dev.azure.com/orginfinity007/CloudSkillChallenge/_apis/build/status/TheInfinity007.Azure-Devops-Pipeline-Calculator?branchName=master)](https://dev.azure.com/orginfinity007/CloudSkillChallenge/_build/latest?definitionId=14&branchName=master) 
-
 [![Build Status](https://github.com/theinfinity007/Azure-Devops-Pipeline-Calculator/actions/workflows/build.yml/badge.svg)](https://github.com/TheInfinity007/Azure-Devops-Pipeline-Calculator/actions/workflows/build.yml) 
-
 [![Build Status](https://github.com/theinfinity007/Azure-Devops-Pipeline-Calculator/actions/workflows/post-commit.yml/badge.svg)](https://github.com/TheInfinity007/Azure-Devops-Pipeline-Calculator/actions/workflows/post-commit.yml)
-
 [![Build Status](https://github.com/theinfinity007/Azure-Devops-Pipeline-Calculator/actions/workflows/welcome.yml/badge.svg)](https://github.com/TheInfinity007/Azure-Devops-Pipeline-Calculator/actions/workflows/welcome.yml)
 
 
