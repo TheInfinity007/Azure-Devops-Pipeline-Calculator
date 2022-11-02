@@ -3,6 +3,8 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
+# This pipeline will build and deploy the code to web app in azure
+
 trigger:
 - master
 
