@@ -27,6 +27,13 @@ stages:
               npm test
             displayName: 'npm install, build and test'
           
+          - task: PublishBuildArtifacts@1
+            inputs:
+              PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+              ArtifactName: 'drop'
+              publishLocation: 'Container'
+
+          
   - stage: Deploy
     jobs:
       - job: Deploy
@@ -34,6 +41,14 @@ stages:
           vmImage: ubuntu-latest
 
         steps: 
+
+          - task: DownloadBuildArtifacts@1
+            inputs:
+              buildType: 'current'
+              downloadType: 'single'
+              artifactName: 'drop'
+              downloadPath: '$(System.ArtifactsDirectory)'
+
           - task: AzureRmWebAppDeployment@4
             inputs:
               ConnectionType: 'AzureRM'
